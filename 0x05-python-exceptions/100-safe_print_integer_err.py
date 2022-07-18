@@ -14,7 +14,7 @@ def safe_print_integer_err(value):
 
     Returns:
         True if value has been correctly printed - the value is an integer
-        Otherwise - False and prints in stderr the error precede by Exception:
+        Otherwise - False, prints in stderr the error precede by Exception:
     """
 
     try:
