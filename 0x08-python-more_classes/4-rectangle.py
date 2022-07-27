@@ -3,10 +3,10 @@
 
 
 class Rectangle:
-    """represents a rectangle"""
+    """represents a rectangle."""
 
     def __init__(self, width=0, height=0):
-        """initializes a new rectangle
+        """initializes a rectangle
 
         Args:
             width (int): width of the rectangle
@@ -17,7 +17,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """gets or sets the width of the rectangle"""
+        """sets the width of the rectangle"""
         return self.__width
 
     @width.setter
@@ -30,7 +30,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """gets or sets the height of the rectangle"""
+        """sets the height of the rectangle"""
         return self.__height
 
     @height.setter
@@ -52,7 +52,7 @@ class Rectangle:
         return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        """returns the printable representations of the rectangle,
+        """returns the printable representation of the rectangle,
         representing the rectangle with the # character
         """
         if self.__width == 0 or self.__height == 0:
@@ -65,7 +65,7 @@ class Rectangle:
                 rect.append("\n")
         return ("".join(rect))
 
-def __repr__(self):
+    def __repr__(self):
         """returns the string representation of the rectangle"""
         rect = "Rectangle(" + str(self.__width)
         rect += ", " + str(self.__height) + ")"
