@@ -46,9 +46,9 @@ class Rectangle:
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
-           raise TypeError("height must be an integer")
+            raise TypeError("height must be an integer")
         if value < 0:
-           raise ValueError("height must be >= 0")
+            raise ValueError("height must be >= 0")
         self.__height = value
 
     def area(self):
@@ -76,6 +76,7 @@ class Rectangle:
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
+
             raise TypeError("rect_2 must be an instance of Rectangle")
         if rect_1.area() >= rect_2.area():
             return (rect_1)
@@ -83,10 +84,10 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """returns a new rectangle with width and height equal to size
+        """returns a new rectangle; width and height equal to size
 
         Args:
-            size (int): The width and height of the new rectangle
+            size (int): width and height of the new rectangle.
         """
 
         return (cls(size, size))
