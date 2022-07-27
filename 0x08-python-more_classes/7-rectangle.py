@@ -20,6 +20,7 @@ class Rectangle:
             width (int): width of the rectangle
             height (int): height of the rectangle
         """
+
         type(self).number_of_instances += 1
         self.width = width
         self.height = height
@@ -62,14 +63,14 @@ class Rectangle:
 
     def __str__(self):
         """returns the printable representation of the rectangle,
-        representing the rectangle with the # character.
+        representing the rectangle with the # character
         """
         if self.__width == 0 or self.__height == 0:
             return ("")
 
         rect = []
         for i in range(self.__height):
-            [rect.append('#') for j in range(self.__width)]
+            [rect.append(str(self.print_symbol)) for j in range(self.__width)]
             if i != self.__height - 1:
                 rect.append("\n")
         return ("".join(rect))
@@ -81,6 +82,6 @@ class Rectangle:
         return (rect)
 
     def __del__(self):
-        """prints a message for every deletion of a rectangle"""
+        """prints a message for the deletion of the rectangle"""
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
